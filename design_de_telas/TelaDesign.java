@@ -10,7 +10,6 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
-import javax.swing.JRadioButton;
 import javax.swing.JTextField;
 
 
@@ -26,9 +25,8 @@ public class TelaDesign extends JFrame{
         tela.setLayout(new GridLayout(linha, coluna,hgap,vgap));
         tela.setFont(new Font("Times New Roman ", Font.BOLD, 20));
         tela.setForeground(new Color(237,241,238));
-        tela.setBackground(new Color(70,130,180));
       
-      // tela.setLayout(new BorderLayout());
+
         /*Fundo da tela */
         tela.setBackground(new Color(176,196,222));
         
@@ -52,12 +50,6 @@ public class TelaDesign extends JFrame{
         return genericaLegenda;
     }
 
-    public static JRadioButton criarCheckBox(String opcao, int tamanhoFonte){
-        JRadioButton genericoCheckBox=new JRadioButton(opcao);
-        genericoCheckBox.setFont(new Font("Arial", Font.BOLD, tamanhoFonte));
-        genericoCheckBox.setFocusPainted(false);      
-        return genericoCheckBox;
-    }
 
     public static JButton criarButton(String nome, int tamanhoFonte){
         JButton genericoButton=new JButton(nome);

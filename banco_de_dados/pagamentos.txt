@@ -1,3 +1,5 @@
 valorPago;tipoPagamento
 15;pix
 15;cartao
+15;dinheiro
+30;pix

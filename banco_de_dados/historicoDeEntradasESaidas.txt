@@ -6,3 +6,6 @@ horarioEntrada;idVaga;tipoVeiculo;atributosEspecificos
 1;15;carro;2
 2;f14;moto;50
 3;j20;carro;musgo;ford;basico
+2;h50;carro;rosa;ford;basico
+1;15;carro;3
+4;30;carro;6

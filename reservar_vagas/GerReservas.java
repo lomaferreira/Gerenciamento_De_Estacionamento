@@ -66,7 +66,7 @@ private static boolean clienteAutorizado() {
                 } else {
                     // Libera a vaga, marcando-a como disponível
                     String idVaga = reserva[0];
-                    GerVagas.atualizarStatusVaga(idVaga, "disponivel");
+                    GerVagas.atualizarStatusVaga(idVaga, "livre");
                 }
             } catch (NumberFormatException e) {
                 System.err.println("Erro ao converter dados: " + e.getMessage());

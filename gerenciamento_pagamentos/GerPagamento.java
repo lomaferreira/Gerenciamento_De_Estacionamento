@@ -29,36 +29,40 @@ public static void pagar(int valorPago, String idVaga, String tipoPagamento, int
     int numLinha = 0;
     String veiculo = "";
 
+    boolean vagaExiste=false;
     // Ler informações do arquivo de vagas de veiculos para encontrar a vaga
     List<String[]> informacoesVagas = LerEscreverArquivos.lerInformacoesLinha("./banco_de_dados/vagasCadastradas.txt");
     //"localizacao;numero;status;idVaga;veiculo\n"
     for (String[] linha : informacoesVagas) {
         if (linha[3].equals(idVaga)) {
+           vagaExiste=true;
             break;
         }
     }
-
-    // Ler informações do arquivo de entrada para encontrar o veículo
-    List<String[]> informacoesEntradas = LerEscreverArquivos.lerInformacoesLinha("./banco_de_dados/entradaDeVeiculos.txt");
-    for (String[] linha : informacoesEntradas) {
-        try {
-            // Verifica se o array tem pelo menos 2 elementos
-            if (linha.length > 1) {
-               if (linha[1].equals(idVaga)) {
-                 horarioEntrada = linha[0];
-                veiculo = linha[2];
-                break;
+    if(vagaExiste){
+        // Ler informações do arquivo de entrada para encontrar o veículo
+        List<String[]> informacoesEntradas = LerEscreverArquivos.lerInformacoesLinha("./banco_de_dados/entradaDeVeiculos.txt");
+        for (String[] linha : informacoesEntradas) {
+            try {
+                // Verifica se o array tem pelo menos 2 elementos
+                if (linha.length > 1) {
+                   if (linha[1].equals(idVaga)) {
+                     horarioEntrada = linha[0];
+                    veiculo = linha[2];
+                    break;
+                }
+            } else {
+                // Lida com o caso onde o array não tem o tamanho esperado
+                System.err.println("Erro: Tamanho do array menor que o esperado.");
             }
-        } else {
-            // Lida com o caso onde o array não tem o tamanho esperado
-            System.err.println("Erro: Tamanho do array menor que o esperado.");
+        } catch (ArrayIndexOutOfBoundsException e) {
+            // Captura a exceção caso o índice esteja fora dos limites
+            System.err.println("Erro ao acessar o índice do array: " + e.getMessage());
         }
-    } catch (ArrayIndexOutOfBoundsException e) {
-        // Captura a exceção caso o índice esteja fora dos limites
-        System.err.println("Erro ao acessar o índice do array: " + e.getMessage());
-    }
-    numLinha++;
-        
+        numLinha++;
+            
+        }
+
     }
 
 

@@ -1,3 +1,5 @@
 tempoPermanencia;valorPago;veiculo;horarioSaida
 1;15;carro;2
 1;15;carro;2
+1;15;carro;3
+4;30;carro;6
