@@ -1,0 +1,8 @@
+tempoPermanencia;valorPago;veiculo;horarioSaida
+horarioEntrada;idVaga;tipoVeiculo;atributosEspecificos
+1;j20;carro;verde;ford;economico
+1;15;carro;2
+2;j20;carro;azul;ford;economico
+1;15;carro;2
+2;f14;moto;50
+3;j20;carro;musgo;ford;basico

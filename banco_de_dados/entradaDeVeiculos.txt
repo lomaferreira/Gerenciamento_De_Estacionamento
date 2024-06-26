@@ -1,0 +1,3 @@
+2;j20;carro;azul;ford;economico
+2;f14;moto;50
+3;j20;carro;musgo;ford;basico

@@ -1,0 +1,3 @@
+valorPago;tipoPagamento
+15;pix
+15;cartao

@@ -1,0 +1,5 @@
+localizacao;numero;status;idVaga;veiculo
+andar;12;ocupada;k20;moto
+andar;4;ocupada;j20;carro
+andar;12;ocupada;f14;moto
+andar;8;ocupada;p20;moto
